@@ -41,21 +41,21 @@ class _SpladhScreenState extends State<SpladhScreen>
     SharedPreferences prefs = await SharedPreferences.getInstance();
 
     Future.delayed(Duration(seconds: 4), () {
-      if (prefs.containsKey('new')) {
-        Navigator.pushReplacement(
-          context,
-          MaterialPageRoute(
-            builder: (context) => Home(),
-          ),
-        );
-      } else {
-        Navigator.push(
-          context,
-          MaterialPageRoute(
-            builder: (context) => TermsOfUse(),
-          ),
-        );
-      }
+      // if (prefs.containsKey('new')) {
+      Navigator.pushReplacement(
+        context,
+        MaterialPageRoute(
+          builder: (context) => Home(),
+        ),
+      );
+      // } else {
+      //   Navigator.push(
+      //     context,
+      //     MaterialPageRoute(
+      //       builder: (context) => TermsOfUse(),
+      //     ),
+      //   );
+      // }
     });
     super.didChangeDependencies();
   }
