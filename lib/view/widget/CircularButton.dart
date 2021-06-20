@@ -12,7 +12,7 @@ class CircularButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: MediaQuery.of(context).size.width / 1.5,
-      height: MediaQuery.of(context).size.height / 1.5,
+      height: MediaQuery.of(context).size.width / 1.5,
       decoration: BoxDecoration(
         boxShadow: glow
             ? [
@@ -24,9 +24,10 @@ class CircularButton extends StatelessWidget {
               ]
             : [
                 BoxShadow(
-                    color: Colors.black.withOpacity(0.1),
-                    blurRadius: 20.0,
-                    spreadRadius: 10.0),
+                  color: Colors.black.withOpacity(0.1),
+                  blurRadius: 20.0,
+                  spreadRadius: 10.0,
+                )
               ],
         border: Border.all(color: KBlackBorder, width: 4),
         gradient: gradent,
