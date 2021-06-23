@@ -1,9 +1,11 @@
 import 'package:device_shield/appConfig/appTextStyle.dart';
+import 'package:device_shield/helper/ad_helper.dart';
 import 'package:device_shield/view/widget/CircularButton.dart';
 import 'package:device_shield/view/widget/CustomContainer.dart';
 import 'package:device_shield/view/widget/SelectVPN.dart';
 import 'package:device_shield/view/widget/SpeedMeter.dart';
 import 'package:flutter/material.dart';
+import 'package:google_mobile_ads/google_mobile_ads.dart';
 
 class VpnScreen extends StatelessWidget {
   // const VpnScreen({ Key? key }) : super(key: key);
@@ -83,6 +85,13 @@ class VpnScreen extends StatelessWidget {
             ),
           ),
         ),
+        Container(
+          height: 50,
+          child: AdWidget(
+            key: UniqueKey(),
+            ad: AdHelper.createBannerAd()..load(),
+          ),
+        )
       ],
     ));
   }

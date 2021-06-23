@@ -1,7 +1,10 @@
+import 'package:device_shield/helper/ad_helper.dart';
 import 'package:device_shield/view/screen/SplashScreen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  AdHelper.initialze();
   runApp(MaterialApp(
     debugShowCheckedModeBanner: false,
     home: MyApp(),
